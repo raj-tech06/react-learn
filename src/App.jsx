@@ -1,5 +1,180 @@
+import Stu from "./emp"
+
+const ans=Stu.map((key)=>{
+    return(
+        <>
+        <tr>
+            <td>{key.name}</td>
+            <td>{key.rollno}</td>
+            <td>{key.city}</td>
+            <td>{key.salary}</td>
+
+        </tr>
+        </>
+    )
+})
+
+const App=()=>{
+    return(
+        <>
+ <table border="1">
+    <tr>
+        <th>name</th>
+        <th>rollno</th>
+        <th>city</th>
+        <th>salary</th>
+       
+       
+    </tr>
+    {ans}
+ </table>
+      
+        </>
+    )
+}
+export default App;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const Stu=[
+//     {
+//         "name":"raj",
+//         "rollno":121,
+//         "city":"bhopal"
+//     },
+//     {
+//         "name":"raja",
+//         "rollno":121,
+//         "city":"indore"
+//     },
+//     {
+//         "name":"abhi",
+//         "rollno":121,
+//         "city":"mumbai"
+//     }
+// ]
+
+
+// const ans=Stu.map((key)=>{
+//     return(
+//         <>
+//         <tr>
+//             <td>{key.name}</td>
+//             <td>{key.rollno}</td>
+//             <td>{key.city}</td>
+//         </tr>
+//         </>
+//     )
+// })
+
+
+
+// const App=()=>{
+//     return(
+//         <>
+//  <table border="1">
+//     <tr>
+//         <th>name</th>
+//         <th>rollno</th>
+//         <th>city</th>
+       
+//     </tr>
+//     {ans}
+//  </table>
+      
+//         </>
+//     )
+// }
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// array ki listing karna- order or unorder list me karna -- ul or ol kar ne se ----------
+
+// const name=["raj","abhi","manju","html","css"];
+
+// const ans= name.map((key)=>{
+//     return(
+//         <>
+//         <li>{key}</li>       
+//         </>
+//     )    
+// })
+
+// const App=()=>{
+//     return(
+//         <>
+ 
+//         <ol>
+//             {ans}
+//         </ol>
+//         </>
+//     )
+// }
+// export default App;
+
+
+
+
+
+// array ki listing karna-------------
+
+// const name=["raj","abhi","manju"];
+
+// const ans= name.map((key)=>{
+//     return(
+//         <>
+//         <h1> {key}</h1>
+       
+//         </>
+//     )    
+// })
+
+// const App=()=>{
+//     return(
+//         <>
+//         {ans}
+      
+//         </>
+//     )
+// }
+// export default App;
 
 
 
