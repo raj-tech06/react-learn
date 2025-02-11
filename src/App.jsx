@@ -1,30 +1,33 @@
-import Stu from "./emp"
-
-const ans=Stu.map((key)=>{
-    return(
-        <>
-        <tr>
-            <td>{key.name}</td>
-            <td>{key.rollno}</td>
-            <td>{key.city}</td>
-            <td>{key.salary}</td>
-
-        </tr>
-        </>
-    )
-})
+// design karna -----------------
 
 const App=()=>{
     return(
         <>
+        <h1 style={{color:"red" , textDecoration:"underline"}}>welcome to cybrome</h1>
+
+        </>
+    )
+}
+export default App;
+
+
+// --------------------------------------------------
+
+import Empdesign from "./empdesign";
+import Empdata from "./Empdata";
+
+const ans=Empdata.map((key)=> <Empdesign name={key.name} city={key.city} salary={key.salary} rollno={key.rollno}  />);
+
+const App=()=>{
+    return(
+        <>
+        <h1 style={{color:"red" , textDecoration:"underline"}}>welcome to cybrome</h1>
  <table border="1">
     <tr>
         <th>name</th>
         <th>rollno</th>
         <th>city</th>
         <th>salary</th>
-       
-       
     </tr>
     {ans}
  </table>
@@ -33,6 +36,78 @@ const App=()=>{
     )
 }
 export default App;
+// ---------------design end--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Stu from "./emp"
+
+// const ans=Stu.map((key)=>{
+//     return(
+//         <>
+//         <tr>
+//             <td>{key.name}</td>
+//             <td>{key.rollno}</td>
+//             <td>{key.city}</td>
+//             <td>{key.salary}</td>
+
+//         </tr>
+//         </>
+//     )
+// })
+
+// const App=()=>{
+//     return(
+//         <>
+//  <table border="1">
+//     <tr>
+//         <th>name</th>
+//         <th>rollno</th>
+//         <th>city</th>
+//         <th>salary</th>
+       
+       
+//     </tr>
+//     {ans}
+//  </table>
+      
+//         </>
+//     )
+// }
+// export default App;
 
 
 
