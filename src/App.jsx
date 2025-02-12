@@ -1,77 +1,268 @@
-// design karna -----------------
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
+
+
+import Carousel from 'react-bootstrap/Carousel';
+// import ExampleCarouselImage from 'components/ExampleCarouselImage';
+import b1 from "./img/a1.jpg";
+import b2 from "./img/a2.jpg";
+import b3 from "./img/a3.jpg";
+
+
+
+
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
 
 const App=()=>{
     return(
         <>
-        <h1 style={{color:"red" , textDecoration:"underline"}}>welcome to cybrome</h1>
+        <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
+
+
+
+
+    <Carousel>
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <img src={b1} style={{width:"100%", height:"300px"}}  alt="" />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={b2} style={{width:"100%", height:"300px"}} alt="" />
+      <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={b3} style={{width:"100%", height:"300px"}} alt="" />
+      <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+
+
+
+
+<div style={{width:"100%", display:"flex"}}>
+
+    <Card style={{ width: '18rem', display:"flex"}}>
+      <img src={b3} />
+      <Card.Body>
+        <Card.Title>Mobile Shop Cart</Card.Title>
+        <Card.Text>
+            this is a mobile cart
+        </Card.Text>
+        <Button variant="primary">visite mobile </Button>
+      </Card.Body>
+    </Card>
+
+    <Card style={{ width: '18rem' }}>
+      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+      <img src={b3} />
+      <Card.Body>
+        <Card.Title>Mobile Shop Cart</Card.Title>
+        <Card.Text>
+            this is a mobile cart
+        </Card.Text>
+        <Button variant="primary">visite mobile </Button>
+      </Card.Body>
+    </Card>
+    
+</div>
         </>
     )
 }
 export default App;
 
 
-// --------------------------------------------------
 
-import Empdesign from "./empdesign";
-import Empdata from "./Empdata";
 
-const ans=Empdata.map((key)=> <Empdesign name={key.name} city={key.city} salary={key.salary} rollno={key.rollno}  />);
 
-const App=()=>{
-    return(
-        <>
-        <h1 style={{color:"red" , textDecoration:"underline"}}>welcome to cybrome</h1>
- <table border="1">
-    <tr>
-        <th>name</th>
-        <th>rollno</th>
-        <th>city</th>
-        <th>salary</th>
-    </tr>
-    {ans}
- </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // import img1 from "./img/a1.jpeg;
+// // import img2 from "./img/
+// import img3 from "./img/download.jpg";
+
+
+// const App=()=>{
+//     return(
+//         <>
+//         <img src={img1} />
+//         <img src={img2} />
+
+//         <img src={img3} />
+//         <br />
+//         {/* <img src="public/img/download.jpg"  /> */}
+
+//          {/* {App1} */}
+//         </>
+//     )
+// }
+// export default App;
+
+
+
+
+
+
+// const App=()=>{
+//     return(
+//         <>
+//          <h1 className="s1">hello </h1>
+//          <h2 className="s2">hello 2</h2>
+//          <h3 className="s3">hello3</h3>
+//          {/* {App1} */}
+//         </>
+//     )
+// }
+// export default App;
+
+
+
+
+
+
+
+
+
+// const MyComponent = () => {
+//   const divStyle = {
+//     backgroundColor: 'lightblue',
+//     padding: '20px',
+//     textAlign: 'center',
+//     borderRadius: '10px',
+//     fontFamily: 'Arial, sans-serif'
+//   }
+
+//   return (
+//     <>
+//     {/* <div style={divStyle}>
+//       <h1>hello i'm raj sahu !</h1>
+//     </div> */}
+//     {/* <div>
+
+//     </div> */}
+//     {/* <div style={{border:"2px solid red" , width:"600px", height:"100px", padding:"120px", background:"red"}}>
+//     <div style={{border:"2px solid red" , width:"800px", height:"150px", text:"220px", margin:"29px", padding:"120px"}}>   
+//     <div style={{border:"2px solid red" , width:"1000px", height:"200px", margin:"20px"}}> 
+//     </div>
+//     </div>
+//     </div> */}
+//     </>
+
+//   )
+// }
+// export default MyComponent;
+
+// ===========================start 16=======================================
+
+// design karna - normaly ----------------
+
+// const App=()=>{
+//     return(
+//         <>
+//         <h1 style={{color:"red" , textDecoration:"underline"}}>welcome to cybrome</h1>
+
+//         </>
+//     )
+// }
+// export default App;
+
+// ===========================start 15=======================================
+
+// -----map karna then design karna  props se key bana kar ----------------------------
+
+// import Empdesign from "./empdesign";
+// import Empdata from "./Empdata";
+
+// const ans=Empdata.map((key)=> <Empdesign name={key.name} city={key.city} salary={key.salary} rollno={key.rollno}  />);
+
+// const App=()=>{
+//     return(
+//         <>
+//  <table border="1">
+//     <tr>
+//         <th>name</th>
+//         <th>rollno</th>
+//         <th>city</th>
+//         <th>salary</th>
+//     </tr>
+//     {ans}
+//  </table>
       
-        </>
-    )
-}
-export default App;
+//         </>
+//     )
+// }
+// export default App;
 // ---------------design end--------------
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ===========================start 14=======================================
+// -----------data ko map karna ---------------------------
 
 // import Stu from "./emp"
 
@@ -111,27 +302,8 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ================================startv 13==========================================================
+// app.jsx me hi (API)data bana kar  display karana with of help proops ------- 
 
 
 // const Stu=[
@@ -188,18 +360,7 @@ export default App;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// ==============================start 12===================================
 // array ki listing karna- order or unorder list me karna -- ul or ol kar ne se ----------
 
 // const name=["raj","abhi","manju","html","css"];
@@ -226,9 +387,8 @@ export default App;
 
 
 
-
-
-// array ki listing karna-------------
+// ===========================start 11=======================================
+// array ki listing karna-    start 11------------
 
 // const name=["raj","abhi","manju"];
 
@@ -250,22 +410,6 @@ export default App;
 //     )
 // }
 // export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // // ======================================================================================
