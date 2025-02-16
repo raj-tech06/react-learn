@@ -1,156 +1,309 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./layout";
-import Home from "./pages/home";
-import About from "./pages/About";
-import Contact from "./pages/contact";
-const App=()=>{
-    return(
-        <>
-        <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>}/>
-          <Route path="home" element={<Home />}/>
-          <Route path="about" element={<About />}/>
-          <Route path="contact" element={<Contact />}/>
 
-          </Route>
-        </Routes>
-        </BrowserRouter>
-        </>
-    )
+const App=()=>{
+
+
+  const handelinput=(e)=>{
+    let name= e.target.name;
+    let value = e.target.value;
+    console.log({[name]:value})
+  
   }
-  export default App;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bootstrap------------------------
-
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-
-
-
-import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
-import b1 from "./img/a1.jpg";
-import b2 from "./img/a2.jpg";
-import b3 from "./img/a3.jpg";
-
-
-import Stack from 'react-bootstrap/Stack';
-
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
-
-const App=()=>{
-    return(
+return(
         <>
-        <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <h1>hello</h1>
+        {/* <button >btn</button> */}
+        <input type="text"  name="mycity" value="bhopal" onChange={handelinput}/>
+        </>
+)
+}
+export default  App;
+
+
+
+// error--------------
+// const App=()=>{
+
+//   function Myname(e){
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     alert(`my name is ${name} ${value}`)
+
+//   }
+
+//     return(
+//         <>
+//         <h1>welcome</h1>
+//         <button name={hello} value={hii} onClick={{Myname}}>button</button>
+//         </>
+//     )
+//   }
+//   export default App;
+// errrrrr------------
 
 
 
 
 
-    <Carousel>
-      <Carousel.Item>
-        {/* <ExampleCarouselImage text="First slide" /> */}
-        <img src={b1} style={{width:"100%", height:"300px"}}  alt="" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={b2} style={{width:"100%", height:"300px"}} alt="" />
-      <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img src={b3} style={{width:"100%", height:"300px"}} alt="" />
-      <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
 
 
 
-{/* crd--------------------------------- */}
 
-<div style={{width:"100%", display:"flex"}}>
 
-    <Card style={{ width: '18rem', display:"flex"}}>
-      <img src={b3} />
-      <Card.Body>
-        <Card.Title>Mobile Shop Cart</Card.Title>
-        <Card.Text>
-            this is a mobile cart
-        </Card.Text>
-        <Button variant="primary">visite mobile </Button>
-      </Card.Body>
-    </Card>
 
-    <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-      <img src={b3} />
-      <Card.Body>
-        <Card.Title>Mobile Shop Cart</Card.Title>
-        <Card.Text>
-            this is a mobile cart
-        </Card.Text>
-        <Button variant="primary">visite mobile </Button>
-      </Card.Body>
-    </Card>
+
+
+
+
+
+  // const App=()=>{
+  
+  //   function Myname(name,e){
+  //     alert(`my name is ${name} ${e.type}`)
+  
+  //   }
+  
+  //     return(
+  //         <>
+  //         <h1>welcome</h1>
+  //         <button onClick={(e)=>{Myname("raj", e)}}>button</button>
+  //         </>
+  //     )
+  //   }
+  //   export default App;
+  
+  
+
+
+
+
+  // const App=()=>{
+  
+  //   function Myname(name,surname){
+  //     alert(`my name is ${name} ${surname}`)
+  
+  //   }
+  
+  //     return(
+  //         <>
+  //         <h1>welcome</h1>
+  //         <button onClick={()=>{Myname("raj","Sahu")}}>button</button>
+  //         </>
+  //     )
+  //   }
+  //   export default App;
+  
+  
+  
+
+
+
+
+
+  // const App=()=>{
+  
+
+  //   function Myname(nm){
+  //     alert("myname:" + nm)
+  
+  //   }
+  
+  //     return(
+  //         <>
+  //         <h1>welcome</h1>
+  //         <button onClick={()=>{Myname("raj")}}>button</button>
+  //         </>
+  //     )
+  //   }
+  //   export default App;
+  
+  
+  
+
+
+  // const App=()=>{
+
+
+  //   function display(){
+  //     alert("hello")
+  //   }
+  
+  //     return(
+  //         <>
+  //         <h1>welcome</h1>
+  //         <button onClick={display}>button</button>
+  //         </>
+  //     )
+  //   }
+  //   export default App;
+  
+  
+
+
+
+
+
+
+
+// // Router--------------------
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Layout from "./layout";
+// import Home from "./pages/home";
+// import About from "./pages/About";
+// import Contact from "./pages/contact";
+// import NoPage from "./pages1";
+// const App=()=>{
+//     return(
+//         <>
+//         <BrowserRouter>
+//         <Routes>
+//           <Route path="/" element={<Layout />}>
+//           <Route index element={<Home/>}/>
+//           <Route path="home" element={<Home />}/>
+//           <Route path="about" element={<About />}/>
+//           <Route path="contact" element={<Contact />}/>
+
+          
+//           <Route path="*" element={<NoPage />}/>
+
+//           </Route>
+//         </Routes>
+//         </BrowserRouter>
+//         </>
+//     )
+//   }
+//   export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// bootstrap------------------------
+
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+
+
+
+
+// import Carousel from 'react-bootstrap/Carousel';
+// // import ExampleCarouselImage from 'components/ExampleCarouselImage';
+// import b1 from "./img/a1.jpg";
+// import b2 from "./img/a2.jpg";
+// import b3 from "./img/a3.jpg";
+
+
+// import Stack from 'react-bootstrap/Stack';
+
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+
+
+// const App=()=>{
+//     return(
+//         <>
+//         <Navbar expand="lg" className="bg-body-tertiary">
+//       <Container>
+//         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav">
+//           <Nav className="me-auto">
+//             <Nav.Link href="#home">Home</Nav.Link>
+//             <Nav.Link href="#link">Link</Nav.Link>
+//             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+//               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+//               <NavDropdown.Item href="#action/3.2">
+//                 Another action
+//               </NavDropdown.Item>
+//               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+//               <NavDropdown.Divider />
+//               <NavDropdown.Item href="#action/3.4">
+//                 Separated link
+//               </NavDropdown.Item>
+//             </NavDropdown>
+//           </Nav>
+//         </Navbar.Collapse>
+//       </Container>
+//     </Navbar>
+
+
+
+
+
+//     <Carousel>
+//       <Carousel.Item>
+//         {/* <ExampleCarouselImage text="First slide" /> */}
+//         <img src={b1} style={{width:"100%", height:"300px"}}  alt="" />
+//         <Carousel.Caption>
+//           <h3>First slide label</h3>
+//           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//       <img src={b2} style={{width:"100%", height:"300px"}} alt="" />
+//       <Carousel.Caption>
+//           <h3>Second slide label</h3>
+//           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//       <Carousel.Item>
+//       <img src={b3} style={{width:"100%", height:"300px"}} alt="" />
+//       <Carousel.Caption>
+//           <h3>Third slide label</h3>
+//           <p>
+//             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+//           </p>
+//         </Carousel.Caption>
+//       </Carousel.Item>
+//     </Carousel>
+
+
+
+// {/* crd--------------------------------- */}
+
+// <div style={{width:"100%", display:"flex"}}>
+
+//     <Card style={{ width: '18rem', display:"flex"}}>
+//       <img src={b3} />
+//       <Card.Body>
+//         <Card.Title>Mobile Shop Cart</Card.Title>
+//         <Card.Text>
+//             this is a mobile cart
+//         </Card.Text>
+//         <Button variant="primary">visite mobile </Button>
+//       </Card.Body>
+//     </Card>
+
+//     <Card style={{ width: '18rem' }}>
+//       {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+//       <img src={b3} />
+//       <Card.Body>
+//         <Card.Title>Mobile Shop Cart</Card.Title>
+//         <Card.Text>
+//             this is a mobile cart
+//         </Card.Text>
+//         <Button variant="primary">visite mobile </Button>
+//       </Card.Body>
+//     </Card>
     
 // </div>
 
