@@ -1,23 +1,150 @@
+// Quetion---> what is counter program in react js----------
+
+// use state managment-------------
+import { useState } from "react";
 
 const App=()=>{
+const [data , setData]=useState(0);
 
-
-  const handelinput=(e)=>{
-    let name= e.target.name;
-    let value = e.target.value;
-    console.log({[name]:value})
-  
+const mydec=()=>{
+  if(data<=0){
+    alert("not decremenet")
   }
-
+  else{
+    setData(data-1)
+  }
+}
 return(
         <>
-        <h1>hello</h1>
-        {/* <button >btn</button> */}
-        <input type="text"  name="mycity" value="bhopal" onChange={handelinput}/>
+        <center>
+        <button onClick={()=>{setData(data+1)}}>increment</button>
+        <h1>My counter:{data}</h1>
+        <button onClick={mydec}>decremnet</button>
+        </center>
         </>
 )
 }
 export default  App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // use state managment-----2nd type--------
+// import { useState } from "react";
+
+// const App=()=>{
+// const [color , setData]=useState("red")
+
+// return(
+//         <>
+//         <h1 style={{color:color}}>My color:{color}</h1>
+//         <button onClick={()=>{setData("blue")}}>blue </button>
+//         <button onClick={()=>{setData("orange")}}>orange </button>
+//         <button onClick={()=>{setData("green")}}>green </button>
+//         <button onClick={()=>{setData("yellow")}}>yellow </button>
+//         <button onClick={()=>{setData("red")}}>red </button>
+
+        
+
+//         </>
+// )
+// }
+// export default  App;
+
+
+
+
+
+
+
+
+// // use state managment-----2nd type--------
+// import { useState } from "react";
+
+// const App=()=>{
+// const [color , setData]=useState("red")
+
+// return(
+//         <>
+//         <h1>My color:{color}</h1>
+//         <button onClick={()=>{setData("blue")}}>Click here</button>
+//         <button onClick={()=>{setData("white")}}>Click here</button>
+
+//         </>
+// )
+// }
+// export default  App;
+
+
+
+
+
+
+
+
+
+
+// // use state huk-- state managment----- type 1------
+// import { useState } from "react";
+
+// const App=()=>{
+// const [data , setData]=useState("bhopal")
+//   const myval=()=>{
+//     setData("indore")
+//   }
+
+
+// return(
+//         <>
+//         <h1>city:{data}</h1>
+//         <button onClick={myval}>Click here</button>
+//         </>
+// )
+// }
+// export default  App;
+
+
+
+
+
+
+
+
+
+
+
+
+// // event -------------
+// const App=()=>{
+
+
+//   const handelinput=(e)=>{
+//     let name= e.target.name;
+//     let value = e.target.value;
+//     console.log({[name]:value})
+  
+//   }
+
+// return(
+//         <>
+//         <h1>hello</h1>
+//         {/* <button >btn</button> */}
+//         <input type="text"  name="mycity" value="bhopal" onChange={handelinput}/>
+//         </>
+// )
+// }
+// export default  App;
 
 
 
