@@ -1,30 +1,145 @@
-// Quetion---> what is counter program in react js----------
-
-// use state managment-------------
+// form---------useEffect--------
 import { useState } from "react";
 
-const App=()=>{
-const [data , setData]=useState(0);
 
-const mydec=()=>{
-  if(data<=0){
-    alert("not decremenet")
+const App=()=>{
+  const [Empno,setEmpno]=useState("");
+  const [name,setname]=useState("");
+  const [city,setcity]=useState("");
+  const [salary,setSalary]=useState("");
+
+  const handleSubmit=()=>{
+    console.log({Empno:Empno,name:name, city:city,salary:salary, })
   }
-  else{
-    setData(data-1)
-  }
+  return( 
+    <>
+   <h1>Application Form</h1>
+   Enter name <input type="text" value={name}  
+   onChange={(e)=>{setname(e.target.value)}}/>
+   <br />
+
+   Enter city <input type="text" value={city} 
+   onChange={(e)=>{setcity(e.target.value)}}/>
+   <br />
+
+    Enter name <input type="text" value={salary}  
+   onChange={(e)=>{setSalary(e.target.value)}}/>
+   <br />
+
+   Enter name <input type="text" value={Empno}  
+   onChange={(e)=>{setEmpno(e.target.value)}}/>
+   <br />
+   <button onClick={handleSubmit}>submit</button>
+    </>
+  )
 }
-return(
-        <>
-        <center>
-        <button onClick={()=>{setData(data+1)}}>increment</button>
-        <h1>My counter:{data}</h1>
-        <button onClick={mydec}>decremnet</button>
-        </center>
-        </>
-)
-}
-export default  App;
+export default App;
+
+
+
+
+
+
+
+
+
+// 3rd----type--------------
+// import { useEffect, useState } from "react";
+
+
+// {/* // const App=()=>{ */}
+//   const [count,setCount]=useState(0);
+//   const [multi,setMulti]=useState(0);
+
+//  useEffect(()=>{
+//   setTimeout(()=>{
+//     setMulti(count*2);
+//   },1000)
+//  },[count])
+//   return( 
+//     <>
+//    <h1>My count {count}</h1>
+//    <button onClick={()=>{setCount(count+1)}}>click</button>
+//    <h2 >here{multi}</h2>
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+
+// // // use effect-------------
+// // // useEffect------------
+// import { useEffect,useState } from "react";
+
+// const App=()=>{
+
+// useEffect(()=>{
+
+//   setTimeout(setCount(count+1)); 
+    
+//   }, 5000);
+// };
+//   const [count , setCount]=useState(0);
+// return(
+//         <>
+//             <h1>my counter:{count}</h1>
+//         </>
+//       )
+// }
+// export default  App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Quetion---> what is counter program in react js----------
+
+// // use state managment-------------
+// import { useState } from "react";
+
+// const App=()=>{
+// const [data , setData]=useState(0);
+
+// const mydec=()=>{
+//   if(data<=0){
+//     alert("not decremenet")
+//   }
+//   else{
+//     setData(data-1)
+//   }
+// }
+// return(
+//         <>
+//         <center>
+//         <button onClick={()=>{setData(data+1)}}>increment</button>
+//         <h1>My counter:{data}</h1>
+//         <button onClick={mydec}>decremnet</button>
+//         </center>
+//         </>
+// )
+// }
+// export default  App;
 
 
 
